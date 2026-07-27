@@ -1,7 +1,25 @@
 aid: free-agency
+accessModel:
+  pricing: unknown
+  onboarding: approval
+  trial: false
+  try_now: false
+  public: false
+  label: Requires approval
+  confidence: medium
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/free-agency.png
 name: Free Agency
-description: Free Agency is a company surfaced as a portfolio company of bloomberg-beta and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: Free Agency is a careers company and talent marketplace that pairs technology
+  professionals with an AI-powered Talent Agent which proactively surfaces relevant work
+  — full-time roles and short project engagements with defined deliverables, duration, and
+  compensation. Founded by Sherveen Mashayekhi and backed by Bloomberg Beta, the company has
+  raised a $10M Series A and counts talent placed at companies such as OpenAI, Stripe, and
+  Figma. It also publishes Intent, a newsletter for careerists. Free Agency is a consumer,
+  waitlist-stage product and does not currently expose a public API, SDK, or developer
+  platform; this profile tracks it in the API Evangelist network as a company stub.
 url: https://raw.githubusercontent.com/api-evangelist/free-agency/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,9 +29,16 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Careers
+- Talent
+- Recruiting
+- Marketplace
+- Jobs
+- AI
+- Newsletter
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,3 +48,14 @@ maintainers:
 common:
 - type: Website
   url: https://www.freeagency.com/
+- type: Blog
+  url: https://intent.freeagency.com
+- type: SignUp
+  url: https://tally.so/r/Bz7QYQ
+- type: DomainSecurity
+  url: security/free-agency-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
