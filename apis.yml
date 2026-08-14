@@ -17,19 +17,25 @@ description: Free Agency is a careers company and talent marketplace that pairs 
   — full-time roles and short project engagements with defined deliverables, duration, and
   compensation. Founded by Sherveen Mashayekhi and backed by Bloomberg Beta, the company has
   raised a $10M Series A and counts talent placed at companies such as OpenAI, Stripe, and
-  Figma. It also publishes Intent, a newsletter for careerists. Free Agency is a consumer,
-  waitlist-stage product and does not currently expose a public API, SDK, or developer
-  platform; this profile tracks it in the API Evangelist network as a company stub.
+  Figma. It also publishes Intent, a newsletter for careerists, and runs CareerMakers, a
+  cohort course hosted on Maven. As of August 2026 the entire public surface is a single
+  waitlist landing page with two Tally intake forms — one for individual talent and one
+  "For AI companies" — plus the Intent newsletter and an Ashby-hosted job board. Free
+  Agency exposes no public API, SDK, developer portal, or machine-readable contract of
+  any kind; this profile tracks it in the API Evangelist network as a company stub with
+  a probed, verified absence rather than an unexamined gap.
 url: https://raw.githubusercontent.com/api-evangelist/free-agency/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - bloomberg-beta
+- ludlow-ventures
+- resolute-ventures
 x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-19'
+modified: '2026-08-13'
 tags:
 - Company
 - Careers
@@ -50,12 +56,50 @@ common:
   url: https://www.freeagency.com/
 - type: Blog
   url: https://intent.freeagency.com
+- type: BlogRSS
+  url: https://intent.freeagency.com/feed
 - type: SignUp
   url: https://tally.so/r/Bz7QYQ
+- type: Contact
+  url: https://tally.so/r/kdKARZ
+- type: Careers
+  url: https://jobs.ashbyhq.com/freeagency
+- type: LinkedIn
+  url: https://www.linkedin.com/company/join-free-agency
+- type: GitHubOrganization
+  url: https://github.com/free-agency
 - type: DomainSecurity
   url: security/free-agency-domain-security.yml
+- type: Plans
+  url: plans/free-agency-plans-pricing.yml
+- type: LLMsTxt
+  url: llms/free-agency-llms.txt
 x-enrichment:
-  date: '2026-07-19'
-  status: backfilled
+  date: '2026-08-13'
+  status: minimal
+  artifacts_added: 3
   pass: local-v1
-  note: backfilled from .gitignore signal + verified work evidence
+  note: >-
+    Full STEP 0b contract discovery run against apex, www, five non-resolving API/docs
+    subdomains and the careermakers vanity host. No OpenAPI, GraphQL, MCP, AsyncAPI or
+    agent card exists. No WellKnown/SecurityTxt/AgentCard pointer emitted — the probe
+    file records verified 404s.
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Free Agency's entire public surface is one Next.js waitlist page — /pricing, /docs,
+    /api, /developers and every /.well-known/ path return HTTP 404, api./app./docs./
+    developer.freeagency.com do not resolve in DNS, and the github.com/free-agency org
+    holds only two forked third-party utility repos, so there is no developer program to
+    read.
+  evidence:
+  - url: https://www.freeagency.com/openapi.json
+    status: 404
+  - url: https://www.freeagency.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.freeagency.com/developers
+    status: 404
+  - url: https://www.freeagency.com/
+    status: 200
+  checked: '2026-08-13'
