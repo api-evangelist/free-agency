@@ -1,0 +1,78 @@
+generated: '2026-08-13'
+method: probed
+source: live HTTPS probes of every Free Agency host known to this profile
+note: >-
+  Every /.well-known/ path probed returned HTTP 404 on both apex and www. Free Agency
+  serves a single Next.js waitlist site with no discovery surface, so NO WellKnown or
+  SecurityTxt pointer is emitted in apis.yml — this file records a verified absence,
+  not a presence. The careermakers.freeagency.com subdomain is excluded from the
+  index below because it is a vanity CNAME onto a Maven (maven.com) course landing
+  page whose SPA catch-all answers HTTP 200 with an HTML shell for EVERY path,
+  including /.well-known/agent-card.json, /openapi.json and /llms.txt. Those 200s are
+  not documents and were rejected on body inspection (content-type text/html,
+  <!DOCTYPE html>, title "Breakthrough Job Search for the Tech Industry by Sherveen
+  Mashayekhi on Maven").
+hosts_probed:
+  - https://www.freeagency.com
+  - https://freeagency.com
+hosts_not_resolving:
+  - api.freeagency.com
+  - app.freeagency.com
+  - docs.freeagency.com
+  - developer.freeagency.com
+  - my.freeagency.com
+hosts_rejected:
+  - host: careermakers.freeagency.com
+    reason: soft-200 SPA catch-all (Maven-hosted course page) returns HTML for every path
+documents:
+  - path: /.well-known/security.txt
+    host: https://www.freeagency.com
+    status: 404
+  - path: /.well-known/openid-configuration
+    host: https://www.freeagency.com
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    host: https://www.freeagency.com
+    status: 404
+  - path: /.well-known/api-catalog
+    host: https://www.freeagency.com
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    host: https://www.freeagency.com
+    status: 404
+  - path: /.well-known/agent-card.json
+    host: https://www.freeagency.com
+    status: 404
+  - path: /.well-known/agent.json
+    host: https://www.freeagency.com
+    status: 404
+  - path: /.well-known/security.txt
+    host: https://freeagency.com
+    status: 404
+  - path: /.well-known/openid-configuration
+    host: https://freeagency.com
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    host: https://freeagency.com
+    status: 404
+  - path: /.well-known/api-catalog
+    host: https://freeagency.com
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    host: https://freeagency.com
+    status: 404
+  - path: /.well-known/agent-card.json
+    host: https://freeagency.com
+    status: 404
+  - path: /.well-known/agent.json
+    host: https://freeagency.com
+    status: 404
+summary:
+  documents_found: 0
+  security_txt: false
+  agent_card: false
+  openid_configuration: false
+  api_catalog: false
+x-evidence:
+  checked: '2026-08-13'
+  method: curl -L, status and content-type recorded per request

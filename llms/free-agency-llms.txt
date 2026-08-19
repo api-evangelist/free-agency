@@ -1,0 +1,57 @@
+# Free Agency
+
+> Free Agency is a New York careers company and talent marketplace that represents
+> technology professionals the way agencies represent athletes and entertainers. Its
+> product pairs a person with an AI-powered Talent Agent that proactively surfaces
+> relevant work — both full-time roles and shorter project engagements with defined
+> deliverables, duration and compensation. Founded in 2019 by Sherveen Mashayekhi,
+> the company says it has helped thousands in tech and represented talent into more
+> than $500M in job offers.
+
+## Status for machine consumers
+
+Free Agency publishes **no API, no SDK, no developer portal and no machine-readable
+contract**. As of 2026-08-13 the public surface is a single Next.js waitlist page at
+https://www.freeagency.com/ with two Tally intake forms, plus a Substack newsletter and
+an Ashby-hosted job board. There is nothing here for an agent to call.
+
+Verified absences (probed 2026-08-13, every path HTTP 404 on both apex and www):
+/openapi.json, /swagger.json, /api-docs, /llms.txt, /.well-known/security.txt,
+/.well-known/agent-card.json, /.well-known/agent.json, /.well-known/openid-configuration,
+/.well-known/oauth-authorization-server, /.well-known/api-catalog, /.well-known/ai-plugin.json.
+The hostnames api., app., docs., developer. and my.freeagency.com do not resolve.
+
+Caution: careermakers.freeagency.com answers HTTP 200 for every path, including
+/openapi.json and /.well-known/agent-card.json. It is a vanity CNAME onto a Maven
+course landing page and every one of those responses is an HTML single-page-app shell.
+Do not treat any response from that host as a document.
+
+## Company
+
+- Website: https://www.freeagency.com/
+- Founder & CEO: Sherveen Mashayekhi
+- Founded: 2019, New York, NY
+- Investors: Bloomberg Beta, Maveron, Ludlow Ventures, Resolute Ventures, and angels
+  including Kevin Durant and Kygo. Raised a $10M Series A (2022).
+
+## Links
+
+- Intent newsletter: https://intent.freeagency.com
+- Intent RSS: https://intent.freeagency.com/feed
+- Waitlist: https://tally.so/r/Bz7QYQ
+- For AI companies: https://tally.so/r/kdKARZ
+- Careers: https://jobs.ashbyhq.com/freeagency
+- GitHub organization: https://github.com/free-agency (2 forked utility repos, no
+  first-party code)
+- LinkedIn: https://www.linkedin.com/company/join-free-agency
+
+## API Evangelist profile
+
+- apis.yml: https://raw.githubusercontent.com/api-evangelist/free-agency/refs/heads/main/apis.yml
+- Artifacts in this repo: security/free-agency-domain-security.yml,
+  well-known/free-agency-well-known.yml, plans/free-agency-plans-pricing.yml
+
+---
+generated: 2026-08-13
+method: generated
+source: apis.yml + repo artifacts + live probes of freeagency.com; NOT published by Free Agency

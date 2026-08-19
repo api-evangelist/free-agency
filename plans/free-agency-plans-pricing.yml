@@ -1,0 +1,23 @@
+generated: '2026-08-13'
+method: searched
+source: https://www.freeagency.com/
+plan_count: 0
+currency: null
+note: >-
+  Free Agency publishes no pricing, plans or rate card of any kind on its public site.
+  https://www.freeagency.com/pricing returns HTTP 404, and the homepage — the entire
+  public product surface as of this probe — is a single waitlist page whose only two
+  calls to action are Tally intake forms ("Join the waitlist" and "For AI companies").
+  There is no self-serve tier, no published commission or placement fee, and no
+  contact-sales pricing page. This is a genuine zero, recorded so the absence is
+  measured rather than omitted.
+plans: []
+evidence:
+  - url: https://www.freeagency.com/pricing
+    status: 404
+  - url: https://www.freeagency.com/
+    status: 200
+    note: waitlist landing page, no pricing content
+  - url: https://tally.so/r/kdKARZ
+    status: 200
+    note: '"For AI companies" intake form — the only commercial path published'
